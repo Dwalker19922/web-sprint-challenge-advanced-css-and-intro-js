@@ -208,16 +208,17 @@ Practice accessing data above by console.log-ing following items:
 (no functions needed) */
 
 //(1) Name of the first artist (0th index) in the array
-
+console.log(artists[0].name)
 
 //(2) Bio of the third artist (2nd index) in the array 
-
+console.log(artists[2].bio)
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 (no function needed) 
 There is a typo in your dataset 😱 The 9th artist, Vincent Van Gogh is currently Vincent Van Dough. Use an array method to fix this issue and console.log() to check your work. */
-
+artists[8].name = "Vincent Van Gogh"
+console.log(artists[8].name)
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀  
@@ -228,10 +229,10 @@ There is a typo in your dataset 😱 The 9th artist, Vincent Van Gogh is current
  
  Example, if getArtistByIndex is invoked with the artists array and the number 0, it will return `the artist at index 0 is Amedeo Modigliani` */
 
-function getArtistByIndex(/*Your Code Here*/) {
-  /*Your Code Here*/
-}  
-
+ function getArtistByIndex(id) {
+  return "the artist at index " + id + " is " + artists[id].name
+  }  
+  console.log(getArtistByIndex(0))
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -257,9 +258,11 @@ function get20s(/*Your Code Here*/){
  
  For example, if removeArtist is invoked with the artists array and the number 0, it will remove Amedeo Modigliani from our dataset and return the number 19. */
 
-function removeArtist(/*Your Code Here*/){
-   /*Your Code Here*/
+ function removeArtist(num){
+  artists.splice(num,1)
+ return artists.length
 }
+console.log(removeArtist(1))
    
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 

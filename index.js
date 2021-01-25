@@ -228,11 +228,12 @@ console.log(artists[8].name)
  3. Return a string in the format `the artist at index {id} is {name}`
  
  Example, if getArtistByIndex is invoked with the artists array and the number 0, it will return `the artist at index 0 is Amedeo Modigliani` */
-
  function getArtistByIndex(id) {
-  return "the artist at index " + id + " is " + artists[id].name
-  }  
-  console.log(getArtistByIndex(0))
+  return
+   `the artist at index ${id} is ${artists[id].name}`
+  }  console.log(getArtistByIndex(0)
+
+
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -243,11 +244,12 @@ Use get20s to do the following:
 Example born in 1901 and died in 1959 - included -- born in 1889 and died in 1925 not included
 If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 
-function get20s(/*Your Code Here*/){
-  /*Your Code Here*/
-}
-
-
+,function get20s(){
+  var array2=[]
+  var i;
+  for (i=0;i < artists.length; i++){if (artists[i].years.lastIndexOf("19")>-1){ array2.push(artists[i].name)}
+  if (array2.includes("18")>-1){array2.splice(i,1)}}
+return array2}
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
  Use removeArtist to do the following:
@@ -258,11 +260,10 @@ function get20s(/*Your Code Here*/){
  
  For example, if removeArtist is invoked with the artists array and the number 0, it will remove Amedeo Modigliani from our dataset and return the number 19. */
 
- function removeArtist(num){
+ ,function removeArtist(num){
   artists.splice(num,1)
  return artists.length
 }
-console.log(removeArtist(1))
    
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -281,10 +282,15 @@ Use addArtist to do the following:
 
 Example: addArtist(artists) should return the artists array with the above object added to the end of the array. */
 
-function addArtist(/*Your Code Here*/){
-    /*Your Code Here*/
+,function addArtist(){
+  artists[20].id=20        
+  artists[20].name="Daniel Walker"
+  artists[20].years="1992 - 2021"
+  artists[20].genre="Web Design"
+  artists[20].nationality="American"
+  artists[20].bio="lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum ";
+  return artists
   }
-
   
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -294,12 +300,13 @@ Use lotsOfArt to do the following:
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ... "Albrecht Dürer"]*/
 
-function lotsOfArt(/*Your Code Here*/){
-  /*Your Code Here*/
+,function lotsOfArt(){
+  var array=[]
+  let p =artists.paintings
+  var i;
+  for (i=0;i < artists.length; i++){if (artists[i].paintings > 100){array.push(artists[i].name)}
 }
-
-
-
+return array}
 
 // 🎨🎨 STRETCH 🎨🎨//
 /* 💪💪💪💪💪💪 STRETCH 1: 💪💪💪💪💪💪 
@@ -323,7 +330,7 @@ The function should console.log 50 chunks of HTML code that match the structure 
 
 ‼️ You do **NOT** need to get these to display on your page, but you can copy and paste the result into your HTML file if you'd like to see what that would look like. */
 
-function getHTML(/* Code here */){
+,function getHTML(/* Code here */){
 
     /* Code here */
 
